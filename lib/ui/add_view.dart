@@ -16,6 +16,7 @@ class _AddViewState extends State<AddView> {
   Widget build(BuildContext context) {
     return Material(
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           DropdownButton(
             value: dropdownValue,
@@ -28,6 +29,7 @@ class _AddViewState extends State<AddView> {
               return DropdownMenuItem<String>(value: value, child: Text(value));
             }).toList(),
           ),
+          SizedBox(height: MediaQuery.of(context).size.height / 35),
           Container(
             width: MediaQuery.of(context).size.width / 1.3,
             child: TextFormField(
@@ -37,6 +39,7 @@ class _AddViewState extends State<AddView> {
               ),
             ),
           ),
+          SizedBox(height: MediaQuery.of(context).size.height / 35),
           Container(
               width: MediaQuery.of(context).size.width / 1.4,
               height: 45,
